@@ -26,7 +26,7 @@ const menuMaker = (item) => {
   menuItems.forEach((menuItem) => {
     const navItem = document.createElement("li");
     item = menuItem;
-    navItem.textContent = menuItem;
+    navItem.textContent = item;
     navList.appendChild(navItem);
   });
 
@@ -42,21 +42,7 @@ const menuMaker = (item) => {
   return menu;
 };
 
-menuItems.forEach((nav) => {
-  header.appendChild(menuMaker(nav.item));
-});
-
-// data.forEach((el) => {
-//   articles.appendChild(
-//     articleMaker(
-//       el.title,
-//       el.date,
-//       el.firstParagraph,
-//       el.secondParagraph,
-//       el.thirdParagraph
-//     )
-//   );
-// });
+header.appendChild(menuMaker(menuItems));
 
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
