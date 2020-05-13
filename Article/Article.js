@@ -146,9 +146,8 @@ const articleMaker = (
 
   btn.addEventListener("click", () => {
     article.classList.toggle("article-open");
-    btn.classList.toggle("close");
 
-    if (btn.classList.contains("close")) {
+    if (article.classList.contains("article-open")) {
       btn.textContent = "close";
     } else {
       btn.textContent = expand;
